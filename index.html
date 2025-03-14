@@ -3,47 +3,124 @@
 	<head>
 		<title>Form Pendaftaran</title>
 		<meta name= "author" content= "aulia fitrah amalia">
+		<style>
+			body{
+				background-color: pink;
+				margin: 0;
+				padding: 0;
+			}
+			h2{
+				color: beige;
+				font-style: italic;
+				text-align: center;
+				font-family: serif;
+			}
+			#h3{
+				color: rgb(255, 0, 221);
+				font-style: italic;
+			}
+			#text-biru{
+				color: blue;
+			}
+			input[type="text"],[type="date"],[type="email"],[type="alamat"],[type="agama"],[type="number"],[type="tel"],[type="Alamat"],[type="file"]{
+				border-radius: 15px;
+				border-color: gray;
+				background-color: beige;
+				color: blue;
+				padding: 10px;
+				width: 90%;
+			}
+			#button{
+				border-radius: 15px;
+				padding: 10px;
+				color: gray;
+				font-weight: bold;
+				width: 45%;
+			}
+			#button:hover{
+				background: rgb(219, 117, 183);
+				font-weight: normal;
+				padding: 10px;
+				color: white;
+			}
+			header{
+				background-color: black;
+				color: white;
+				text-align: center;
+				width: 100%;
+				padding-top: 0px;
+				height: 80px;
+				margin: 0;
+			}
+			main{
+				position: relative;
+				width: 100%;
+				height: 100%;
+			}
+			footer{
+				background: #222;
+				color: white;
+				text-align: center;
+				position: fixed;
+				bottom: 0px;
+				width: 100%;
+
+			}
+			h1{
+				padding: 20px;
+				margin-top: 0;
+			}
+			
+		</style>
 	</head>
 	<body>
-	<h1>FORM Pendaftaran</h1>
+	<header><h1>My Landing Page</h1></header>
+	<main>
+	<h2>FORM Pendaftaran</h2>
 	<form action="" method="GET">
 	<table width="100%">
 	<tr>
-		<td width="50%">
+		<td width="50%" valign="top">
 		<fieldset>
 		<legend>Data Pribadi</legend>
-		<table cellpadding="5">
+		<table>
 			<tr>
 				<td width="30%"><label for="id_nama">Nama Lengkap</label></td>
-				<td>: <input type="text" name="nama" id="id_nama"  placeholder="Nama Lengkap" required autofocus></td>
+				<td>:</td> 
+				<td><input type="text" name="nama" id="id_nama"  placeholder="Nama Lengkap" required autofocus></td>
 			</tr>
 			<tr>
 				<td><label>Email</label></td>
-				<td>: <input type="email" name="email"></td>
+				<td>:</td>
+				<td><input type="email" name="email"></td>
 			</tr>
 			<tr>
 				<td><label>Nomor Telepon</label></td>
-				<td>: <input type="tel" name="no_tlp"></td>
+				<td>:</td>
+				<td><input type="tel" name="no_tlp"></td>
 			</tr>
 			<tr>
 				<td><label>Alamat</label></td>
-				<td valign="widdle">: 
-					<textarea name="alamat" rows="6" cols="30"></textarea>
+				<td valign="widdle">: </td>
+				<td><textarea type="alamat" name="alamat" rows="4" cols="30"></textarea>
 				</td>
 			</tr>
 			<tr>
 				<td><label>Tanggal Lahir</label></td>
-				<td>: <input type="date" name="tgl_lahir"></td>
+				<td>:</td>
+				<td><input type="date" name="tgl_lahir"></td>
 			</tr>
 			<tr>
 				<td><label>Jenis Kelamin</label></td>
-				<td>: <input type="radio" name="jk" value="L">Laki-Laki
+				<td>:</td>
+				<td><input type="radio" name="jk" value="L">Laki-Laki
 				<input type="radio" name="jk" value="P">Perempuan</td>
 			</tr>
 			<tr>
 				<td><label>Agama</label></td>
-				<td>:
-					<select name= "agama" required>
+				<td>:</td>
+				<td>
+					<select type="agama" name= "agama" required>
 						<option value="">Pilih Agama</option>
 						<option value="islam">Islam</option>
 						<option value="kristen">Kristen</option>
@@ -55,66 +132,77 @@
 			</tr>
 			<tr>
 				<td><label>Pendidikan Terakhir</label></td>
-				<td>: <input type="radio" name="pendidikan" value="sma">SMA
+				<td>:</td>
+				<td><input type="radio" name="pendidikan" value="sma">SMA
 				<input type="radio" name="pendidikan" value="d3">D3
 				<input type="radio" name="Pendidikan" value="s1">S1</td>
 			</tr>
 			<tr>
 				<td><label>Foto</label></td>
-				<td>: <input type="file" name="foto" accept="image/*"></td>
+				<td>:</td>
+				<td><input type="file" name="foto" accept="image/*"></td>
 			</tr>
 			<tr>
 				<td><label>CV</label></td>
-				<td>: <input type="file" name="cv" accept=".pdf"></td>
+				<td>:</td>
+				<td><input type="file" name="cv" accept=".pdf"></td>
 			</tr>
 		</table>
 		</fieldset>
 		</td>
 	
-	<td width="50%">
+	<td width="50%" valign="top">
 		<fieldset>
 		<legend>Data Orang Tua</legend>
-		<table cellpadding="5">
+		<table>
 			<tr>
 				<td width="30%"><label for="id_nama">Nama Ayah</label></td>
-				<td>: <input type="text" name="nama" id="id_nama"  required autofocus></td>
+				<td>:</td>
+				<td><input type="text" name="nama" id="id_nama"  required autofocus></td>
 			</tr>
 			<tr>
 				<td><label>Pekerjaan Ayah</label></td>
-				<td>: <input type="text" name="pekerjaan"></td>
+				<td>:</td>
+				<td><input type="text" name="pekerjaan"></td>
 			</tr>
 			<tr>
 				<td><label>Alamat Ayah</label></td>
-				<td>: 
-					<textarea name="alamat_ayah" rows="4" cols="30"></textarea>
+				<td>:</td>
+				<td>
+					<textarea type="alamat"name="alamat_ayah" rows="3" cols="30"></textarea>
 				</td>
 			</tr>
 			<tr>
 				<td><label>Nomor Telepon Ayah</label></td>
-				<td>: <input type="tel" name="no_tlp"></td>
+				<td>:</td>
+				<td><input type="tel" name="no_tlp"></td>
 			</tr>
 			<tr>
 				<td width="30%"><label for="id_nama">Nama Ibu</label></td>
-				<td>: <input type="text" name="nama" id="id_nama"  required autofocus></td>
+				<td>:</td>
+				<td><input type="text" name="nama" id="id_nama"  required autofocus></td>
 			</tr>
 			<tr>
 				<td><label>Pekerjaan Ibu</label></td>
-				<td>: <input type="text" name="pekerjaan"></td>
+				<td>:</td>
+				<td><input type="text" name="pekerjaan"></td>
 			</tr>
 			<tr>
 				<td><label>Alamat Ibu</label></td>
-				<td>: 
-					<textarea name="alamat_ibu" rows="4" cols="30"></textarea>
+				<td>:</td>
+				<td>
+					<textarea type="alamat" name="alamat_ibu" rows="3" cols="30"></textarea>
 				</td>
 			</tr>
 			<tr>
 				<td><label>Nomor Telepon Ibu</label></td>
-				<td>: <input type="tel" name="no_tlp"></td>
+				<td>:</td>
+				<td><input type="tel" name="no_tlp"></td>
 			</tr>
 			<tr>
 				<td>
-					<input type="submit" value="Simpan">
-					<input type="reset" value="Reset">
+					<input type="submit" id="button" value="Simpan">
+					<input type="reset" id="button" value="Reset">
 				</td>
 			</tr>
 		</table>
@@ -123,5 +211,8 @@
 	</tr>
 	</table>
 	</form>	
+	</header>
+	</main>
+	<footer>&copy; 2025 My website. All Rights Reserved.</footer>
 	</body>
 </html>
